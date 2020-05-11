@@ -1,0 +1,5 @@
+main.c中使用了epoll的ET模式，运行client与main.c连接，可以检测到EPOLLOUT的触发；
+
+注意：采用的是ET模式以及非阻塞方式(setnonblocking)
+
+main.c主要是测试一下EPOLLOUT的触发：触发方法是让客户端延迟一段时间再接受数据并在服务器中调用write将tcp发送缓冲区写满，这样服务端write就会返回EAGAIN错误，然后客户端调用read接收数据，就会使得服务端的发送缓冲区由满变为不满，也就是会触发EPOLLOUT；
