@@ -4,4 +4,4 @@
 - 可以请求视频、图片等
 - 日志系统（单例模式）
 -  webbench测试结果如下：
-![]()
+![](./httpserver/resource/webbench.PNG)
