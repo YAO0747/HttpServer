@@ -1,2 +1,0 @@
-此版本已经基本实现了http请求的读取过程，能够正常允许
-待改进：m_read(),m_write(),do_request(),process_write(),process()函数等还未实现完整
